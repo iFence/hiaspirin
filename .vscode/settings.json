@@ -1,7 +1,6 @@
 {
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["Flippable", "Kosto", "lofyee", "NOOC", "tailwindcss"],
+  "cSpell.words": ["lofyee", "NOOC", "tailwindcss", "velite"],
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
   "editor.tabSize": 2
 }

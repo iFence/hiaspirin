@@ -1,11 +1,14 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "main": ".open-next/worker.js",
   "name": "nooc",
+  "main": ".svelte-kit/cloudflare/_worker.js",
   "compatibility_date": "2026-03-31",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "directory": ".open-next/assets",
+    "directory": ".svelte-kit/cloudflare",
     "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
   }
 }

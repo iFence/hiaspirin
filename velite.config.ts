@@ -1,14 +1,21 @@
 import rehypePrettyCode from "rehype-pretty-code";
 import { defineCollection, defineConfig, s } from "velite";
 
+/**
+ * Both blogs share a single content pipeline:
+ *   content/posts/**      -> section "posts" (tech), served under /{lang}/posts
+ *   content/life-posts/** -> section "life",         served under /{lang}/life
+ * Categories live in content/categories/{posts,life}.yml.
+ */
+
 const lang = s.enum(["en", "zh"]);
 
-const name = s.object({
+const localized = s.object({
   en: s.string().max(20),
   zh: s.string().max(20),
 });
 
-const description = s
+const localizedDescription = s
   .object({
     en: s.string().max(100),
     zh: s.string().max(100),
@@ -22,49 +29,39 @@ const count = s
   })
   .default({ en: 0, zh: 0 });
 
+function sectionOfPath(path: string): "posts" | "life" {
+  return path.startsWith("life-posts/") || path.startsWith("categories/life")
+    ? "life"
+    : "posts";
+}
+
 const categories = defineCollection({
   name: "Category",
   pattern: "categories/*.yml",
   schema: s
     .object({
-      slug: s.slug("posts", ["admin", "login"]),
-      cover: s.image().optional(),
-      name,
-      description,
+      slug: s.string(),
+      name: localized,
+      description: localizedDescription,
       count,
+      path: s.path(),
     })
-    .transform((data) => ({
-      ...data,
-      permalink: {
-        en: `/en/posts/categories/${data.slug}`,
-        zh: `/zh/posts/categories/${data.slug}`,
-      },
-    })),
-});
-
-const tags = defineCollection({
-  name: "Tag",
-  pattern: "tags/index.yml",
-  schema: s
-    .object({
-      slug: s.slug("posts", ["admin", "login"]),
-      cover: s.image().optional(),
-      name,
-      description,
-      count,
-    })
-    .transform((data) => ({
-      ...data,
-      permalink: {
-        en: `/en/posts/tags/${data.slug}`,
-        zh: `/zh/posts/tags/${data.slug}`,
-      },
-    })),
+    .transform(({ path, ...data }) => {
+      const section = sectionOfPath(path);
+      return {
+        ...data,
+        section,
+        permalink: {
+          en: `/en/${section}/categories/${data.slug}`,
+          zh: `/zh/${section}/categories/${data.slug}`,
+        },
+      };
+    }),
 });
 
 const posts = defineCollection({
   name: "Post",
-  pattern: "posts/**/*.md",
+  pattern: ["posts/**/*.md", "life-posts/**/*.md"],
   schema: s
     .object({
       title: s.string().max(99),
@@ -79,133 +76,65 @@ const posts = defineCollection({
       draft: s.boolean().default(false),
       featured: s.boolean().default(false),
       categories: s.array(s.string()),
-      tags: s.array(s.string()).default([]),
-      toc: s.toc(),
-      metadata: s.metadata(),
-      excerpt: s.excerpt(),
-      content: s.markdown(),
-    })
-    .transform((data) => ({
-      ...data,
-      permalink: `/${data.lang}/posts/${data.slug}`,
-    })),
-});
-
-const lifeCategories = defineCollection({
-  name: "LifeCategory",
-  pattern: "life-categories.yml",
-  schema: s
-    .object({
-      slug: s.slug("life-posts", ["admin", "login"]),
-      name,
-      description,
-      count,
-    })
-    .transform((data) => ({
-      ...data,
-      permalink: {
-        en: `/en/life/categories/${data.slug}`,
-        zh: `/zh/life/categories/${data.slug}`,
-      },
-    })),
-});
-
-const lifePosts = defineCollection({
-  name: "LifePost",
-  pattern: "life-posts/**/*.md",
-  schema: s
-    .object({
-      title: s.string().max(99),
-      slug: s.string(),
-      lang,
-      description: s.string(),
-      categories: s.array(s.string()),
-      date: s.isodate(),
-      updated: s.isodate().optional(),
-      keywords: s.array(s.string()).optional(),
-      cover: s.image().optional(),
-      video: s.file().optional(),
       wechatLink: s.string().optional(),
-      metadata: s.metadata(),
       excerpt: s.excerpt(),
       content: s.markdown(),
+      path: s.path(),
     })
-    .transform((data) => ({
-      ...data,
-      permalink: `/${data.lang}/life/${data.slug}`,
-    })),
+    .transform(({ path, ...data }) => {
+      const section = sectionOfPath(path);
+      return {
+        ...data,
+        section,
+        permalink: `/${data.lang}/${section}/${data.slug}`,
+      };
+    }),
 });
 
 export default defineConfig({
   root: "content",
   output: {
     data: ".velite",
-    assets: "public/static/posts",
-    base: "/static/posts/",
+    assets: "static/blog",
+    base: "/blog/",
     name: "[name]-[hash:6].[ext]",
     clean: true,
   },
-  collections: { categories, tags, posts, lifeCategories, lifePosts },
+  collections: { categories, posts },
   markdown: { rehypePlugins: [rehypePrettyCode] },
-  prepare: ({ categories, tags, posts, lifeCategories, lifePosts }) => {
-    const docs = posts.filter(
-      (i) => process.env.NODE_ENV !== "production" || !i.draft,
-    );
-
-    const unexpectedCategories = Array.from(
-      new Set(docs.map((item) => item.categories).flat()),
-    ).filter((i) => categories.find((j) => j.slug === i) == null);
-
-    const unexpectedTags = Array.from(
-      new Set(docs.map((item) => item.tags).flat()),
-    ).filter((i) => tags.find((j) => j.slug === i) == null);
-
-    if (unexpectedCategories.length || unexpectedTags.length) {
-      console.error(
-        "Unexpected categories or tags founded: ",
-        unexpectedCategories.join(", "),
-        unexpectedTags.join(", "),
+  prepare: ({ categories, posts }) => {
+    const unknownCategories = posts
+      .flatMap((post) =>
+        post.categories.map((slug) => ({ section: post.section, slug })),
+      )
+      .filter(
+        ({ section, slug }) =>
+          !categories.some((c) => c.section === section && c.slug === slug),
       );
 
+    if (unknownCategories.length > 0) {
+      console.error(
+        "Unknown categories found:",
+        unknownCategories
+          .map(({ section, slug }) => `${section}/${slug}`)
+          .join(", "),
+      );
       return false;
     }
 
-    categories.forEach((category) => {
+    for (const category of categories) {
       category.count = {
-        en: posts.filter(
-          (post) =>
-            post.categories.includes(category.slug) && post.lang === "en",
-        ).length,
-        zh: posts.filter(
-          (post) =>
-            post.categories.includes(category.slug) && post.lang === "zh",
-        ).length,
+        en: 0,
+        zh: 0,
       };
-    });
-
-    tags.forEach((tag) => {
-      tag.count = {
-        en: posts.filter(
-          (post) => post.tags.includes(tag.slug) && post.lang === "en",
-        ).length,
-        zh: posts.filter(
-          (post) => post.tags.includes(tag.slug) && post.lang === "zh",
-        ).length,
-      };
-    });
-
-    // Count life posts per category and language
-    lifeCategories.forEach((category) => {
-      category.count = {
-        en: lifePosts.filter(
-          (post) =>
-            post.categories.includes(category.slug) && post.lang === "en",
-        ).length,
-        zh: lifePosts.filter(
-          (post) =>
-            post.categories.includes(category.slug) && post.lang === "zh",
-        ).length,
-      };
-    });
+      for (const post of posts) {
+        if (
+          post.section === category.section &&
+          post.categories.includes(category.slug)
+        ) {
+          category.count[post.lang] += 1;
+        }
+      }
+    }
   },
 });
