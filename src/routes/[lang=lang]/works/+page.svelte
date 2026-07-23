@@ -16,7 +16,7 @@
 <Seo
   {lang}
   title="{dictionary.labels.works} - {dictionary.meta.websiteName}"
-  description={dictionary.labels.noocWorks}
+  description={dictionary.labels.aspirinWorks}
   path={dictionary.urls.works}
 />
 
@@ -25,7 +25,7 @@
   <PrintedSection>
     <PrintedPageTitle icon="apps">{dictionary.labels.works}</PrintedPageTitle>
     <p class="font-serif text-xs text-printer-ink-light dark:text-printer-ink-dark/50">
-      {dictionary.labels.noocWorks}
+      {dictionary.labels.aspirinWorks}
     </p>
   </PrintedSection>
 

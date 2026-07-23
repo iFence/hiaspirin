@@ -1,4 +1,4 @@
-const BASE_URL = "https://nooc.me";
+const BASE_URL = "https://hiaspirin.cc";
 
 export interface JsonLdWebSite {
   name: string;
@@ -19,12 +19,12 @@ export function generateWebSiteJsonLd(options: JsonLdWebSite): object {
     description: options.description,
     publisher: {
       "@type": "Person",
-      name: "Nooc",
+      name: "Aspirin",
       url: BASE_URL,
       sameAs: [
-        "https://x.com/noobnooc",
-        "https://github.com/noobnooc",
-        "https://t.me/noobnooc",
+        "https://x.com/CobbMiller5",
+        "https://github.com/iFence",
+        "https://space.bilibili.com/16621788",
       ],
     },
   };
@@ -63,12 +63,12 @@ export function generateBlogPostingJsonLd(
       : {}),
     author: {
       "@type": "Person",
-      name: "Nooc",
+      name: "Aspirin",
       url: BASE_URL,
     },
     publisher: {
       "@type": "Person",
-      name: "Nooc",
+      name: "Aspirin",
       url: BASE_URL,
     },
     mainEntityOfPage: {

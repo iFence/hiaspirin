@@ -165,7 +165,7 @@
 
 <div class="min-h-screen page-grid flex flex-col items-center px-3 py-6 sm:py-10">
   <!-- Printer Body -->
-  <div class="w-full max-w-3xl relative">
+  <div class="w-full max-w-5xl relative">
     <!-- Snail crawling along the very top edge of the printer shell -->
     <PrinterSnail />
 
@@ -199,8 +199,8 @@
               ></div>
               <img
                 class="h-8 w-8 rounded-full ring-1 ring-black/10 dark:ring-white/[0.15] shadow-sm dark:shadow-[0_0_12px_rgba(100,120,255,0.1)] relative z-10"
-                src="/static/avatar.webp"
-                alt="Nooc"
+                src="/static/logo.png"
+                alt="Aspirin"
                 width="32"
                 height="32"
               />
@@ -367,14 +367,14 @@
               <div
                 class="font-mono text-[10px] tracking-widest uppercase order-2 sm:order-1"
               >
-                © {currentYear} Nooc
+                © {currentYear} Aspirin · Theme by Nooc
               </div>
               <div
                 class="font-mono text-[10px] tracking-widest uppercase flex items-center gap-4 order-1 sm:order-2"
               >
                 <SocialHoverCard
                   kind="github"
-                  href="https://github.com/noobnooc"
+                  href="https://github.com/iFence"
                   {lang}
                   {dictionary}
                   class="hover:text-printer-accent transition-colors"
@@ -383,7 +383,7 @@
                 </SocialHoverCard>
                 <SocialHoverCard
                   kind="x"
-                  href="https://x.com/noobnooc"
+                  href="https://x.com/CobbMiller5"
                   {lang}
                   {dictionary}
                   class="hover:text-printer-accent transition-colors"
@@ -392,7 +392,7 @@
                 </SocialHoverCard>
                 <SocialHoverCard
                   kind="email"
-                  href="mailto:nooc@nooc.me"
+                  href="mailto:vyulei97@gmail.com"
                   {lang}
                   {dictionary}
                   align="right"

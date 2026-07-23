@@ -297,7 +297,7 @@
               <div
                 class="font-mono text-xs font-bold text-printer-ink dark:text-printer-ink-dark mt-0.5 truncate"
               >
-                Nooc
+                Aspirin
               </div>
               <div
                 class="font-mono text-[10px] text-printer-ink/70 dark:text-printer-ink-dark/60 truncate"

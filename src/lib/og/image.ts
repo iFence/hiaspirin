@@ -195,7 +195,7 @@ function brandingFooter(options: OgImageOptions, large?: boolean): Node {
               display: "flex",
             },
           },
-          options.brandName || "NOOC",
+          options.brandName || "ASPIRIN",
         ),
         h(
           "div",
@@ -206,7 +206,7 @@ function brandingFooter(options: OgImageOptions, large?: boolean): Node {
               display: "flex",
             },
           },
-          "nooc.me",
+          "hiaspirin.cc",
         ),
       ),
     ),
@@ -221,7 +221,7 @@ function brandingFooter(options: OgImageOptions, large?: boolean): Node {
           opacity: 0.8,
         },
       },
-      options.brandTagline || "Nooc the Noob",
+      options.brandTagline || "Hello, I'm Aspirin",
     ),
   );
 }

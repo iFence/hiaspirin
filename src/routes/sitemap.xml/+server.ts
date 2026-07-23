@@ -5,7 +5,7 @@ import type { RequestHandler } from "./$types";
 
 export const prerender = true;
 
-const BASE_URL = "https://nooc.me";
+const BASE_URL = "https://hiaspirin.cc";
 
 interface SitemapUrl {
   loc: string;

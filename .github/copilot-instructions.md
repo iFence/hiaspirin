@@ -1,6 +1,6 @@
-# nooc.me
+# hiaspirin.cc
 
-Personal website & bilingual blog. SvelteKit 2 + Svelte 5 + Tailwind CSS 4 +
+Personal website & bilingual blog (forked from nooc.me). SvelteKit 2 + Svelte 5 + Tailwind CSS 4 +
 Velite, fully prerendered and deployed to Cloudflare Workers.
 
 See [AGENTS.md](../AGENTS.md) for the full contributor guide (project

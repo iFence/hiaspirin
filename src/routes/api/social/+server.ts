@@ -14,14 +14,14 @@ import type { RequestHandler } from "./$types";
 // colo) -> KV last-good snapshot (global) -> bundled fallback snapshot.
 export const prerender = false;
 
-const GITHUB_HANDLE = "noobnooc";
-const X_HANDLE = "noobnooc";
-const TELEGRAM_HANDLE = "noobnooc";
+const GITHUB_HANDLE = "iFence";
+const X_HANDLE = "CobbMiller5";
+const TELEGRAM_HANDLE = "16621788";
 const KV_KEY = "social-stats:v1";
 /** Days of contribution history to expose (18 weeks). */
 const HEATMAP_DAYS = 126;
 
-const USER_AGENT = "nooc.me-social-card (+https://nooc.me)";
+const USER_AGENT = "hiaspirin.cc-social-card (+https://hiaspirin.cc)";
 
 type GitHubProfile = Pick<
   GitHubStats,

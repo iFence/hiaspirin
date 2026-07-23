@@ -2,7 +2,7 @@ import type { RequestHandler } from "./$types";
 
 export const prerender = true;
 
-const BASE_URL = "https://nooc.me";
+const BASE_URL = "https://hiaspirin.cc";
 
 export const GET: RequestHandler = () => {
   const content = `User-Agent: *

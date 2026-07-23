@@ -38,7 +38,7 @@
   jsonLd={[
     generateWebSiteJsonLd({
       name: dictionary.meta.websiteName,
-      alternateName: "Nooc the Noob",
+      alternateName: "Hello, I'm Aspirin",
       url: `${dictionary.meta.baseUrl}${dictionary.urls.home}`,
       description: dictionary.meta.motto,
     }),
@@ -53,7 +53,7 @@
         <h1
           class="font-serif text-2xl font-bold tracking-tight text-printer-ink dark:text-printer-ink-dark"
         >
-          Nooc
+          Aspirin
         </h1>
         <p
           class="font-serif text-xs sm:text-[13px] text-printer-ink-light dark:text-printer-ink-dark/60 mt-1 leading-relaxed"
@@ -199,7 +199,7 @@
         {dictionary.labels.printedOn}
         {printedOn}
       </div>
-      <PrintedLabel variant="muted">nooc.me</PrintedLabel>
+      <PrintedLabel variant="muted">hiaspirin.cc</PrintedLabel>
     </div>
   </div>
 </div>

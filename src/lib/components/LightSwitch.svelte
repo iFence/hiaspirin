@@ -117,7 +117,7 @@
 
 <!-- The bulb, hanging left of the content column -->
 <div
-  class="bulb-root hidden lg:block fixed top-0 left-[max(8px,calc(50%-532px))] z-[95] pointer-events-none"
+  class="bulb-root hidden lg:block fixed top-0 left-[max(8px,calc(50%-660px))] z-[95] pointer-events-none"
   aria-hidden="true"
 >
   <div class="bulb-sway relative">
@@ -164,7 +164,7 @@
 </div>
 
 <!-- The pull cord, hanging right of the content column -->
-<div class="hidden lg:block fixed -top-12 right-[calc(50%-468px)] z-[95] cord-sway">
+<div class="hidden lg:block fixed -top-12 right-[calc(50%-596px)] z-[95] cord-sway">
   <button
     type="button"
     role="switch"
@@ -219,7 +219,7 @@
 <style>
   /* ---------------- room lighting ---------------- */
 
-  /* The bulb hangs at max(58px, 50% - 482px), 135px — gradients are centred there.
+  /* The bulb hangs at max(58px, 50% - 610px), 135px — gradients are centred there.
      Both layers appear instantly when dark mode arrives (hidden behind the
      blackout curtain anyway) but fade away gently when the lamp is switched
      off in daylight. */
@@ -237,7 +237,7 @@
   /* Light falls off with distance from the bulb */
   .lamp-shade {
     background: radial-gradient(
-      140% 140% at max(58px, 50% - 482px) 135px,
+      140% 140% at max(58px, 50% - 610px) 135px,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0.05) 22%,
       rgba(0, 0, 0, 0.16) 45%,
@@ -249,7 +249,7 @@
   /* Warm incandescent spill close to the bulb */
   .lamp-warmth {
     background: radial-gradient(
-      620px circle at max(58px, 50% - 482px) 135px,
+      620px circle at max(58px, 50% - 610px) 135px,
       rgba(255, 190, 110, 0.14),
       rgba(255, 185, 105, 0.05) 45%,
       transparent 72%

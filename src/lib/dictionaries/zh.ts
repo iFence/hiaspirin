@@ -2,20 +2,18 @@ import type { Dictionary } from "./en";
 
 const dictionary: Dictionary = {
   meta: {
-    baseUrl: "https://nooc.me",
-    websiteName: "Nooc 的主页",
+    baseUrl: "https://hiaspirin.cc",
+    websiteName: "Aspirin 的主页",
     motto: "游离于存在与虚无间的理想主义者",
     mottos: [
-      "玫瑰是没有理由的开放",
-      "我们一日日度过的所谓日常，也许是接连不断发生的奇迹",
+      "一辈子很短，如白驹过隙转瞬即逝，可这种心情很长如高山大川绵延不绝。",
     ],
     fillKeywords(keywords?: string[]): string[] {
       return [
-        "Nooc",
-        "noobnooc",
-        "noocink",
-        "nookinc",
-        "Nooc 的个人主页",
+        "Aspirin",
+        "iFence",
+        "hiaspirin",
+        "Aspirin 的个人主页",
         "个人主页",
         "个人网站",
         "独立博客",
@@ -34,8 +32,8 @@ const dictionary: Dictionary = {
 
     shareToX(title: string, postLink: string) {
       return `https://twitter.com/share?text=${encodeURIComponent(
-        `我正在看「${title}」 @noobnooc`,
-      )}&url=${encodeURIComponent(`https://nooc.me${postLink}`)}`;
+        `我正在看「${title}」 @CobbMiller5`,
+      )}&url=${encodeURIComponent(`https://hiaspirin.cc${postLink}`)}`;
     },
   },
   labels: {
@@ -46,15 +44,15 @@ const dictionary: Dictionary = {
     about: "关于",
     latestTech: "技术",
     latestLife: "生活",
-    noocWorks: "Nooc的作品",
+    aspirinWorks: "Aspirin的作品",
     recommended: "推荐",
     activity: "活动",
     categories: "分类",
     featured: "精选",
     archive: "归档",
     shareTo: "分享到：",
-    brandName: "NOOC",
-    brandTagline: "Nooc the Noob",
+    brandName: "ASPIRIN",
+    brandTagline: "你好，我是 Aspirin",
     backToSection: {
       posts: "← 返回技术",
       life: "← 返回生活",
@@ -83,15 +81,6 @@ const dictionary: Dictionary = {
     },
   },
   tools: [
-    {
-      name: "Raycast",
-      summary: "Raycast 是一款功能丰富、扩展性强的 macOS 启动器。",
-      link: "https://raycast.com/?via=nooc",
-      icon: "/images/tools/raycast.webp",
-      rating: 5,
-      platform: "macOS",
-      pricing: "免费增值",
-    },
     {
       name: "OrbStack",
       summary: "OrbStack 是一个简单轻便的运行 Docker 容器和 Linux 的工具。",
@@ -160,97 +149,36 @@ const dictionary: Dictionary = {
   ],
   works: [
     {
-      name: "Dippod",
-      summary: "AI 闪卡学习，支持主题、PDF 和笔记转卡。",
-      image: "/static/dippod.webp",
-      link: "https://dippod.com",
+      name: "Power Paste",
+      summary: "一个强大的剪贴板和粘贴工具。",
+      image: "/static/power-paste.png",
+      link: "https://power-paste.hiaspirin.cc",
       primary: true,
-    },
-    {
-      name: "回声铃",
-      summary: "将 Webhook/邮件转为即时通知与电话警报",
-      image: "/static/echobell.webp",
-      link: "https://echobell.one",
-      primary: true,
-    },
-    {
-      name: "星火记",
-      summary: "快速捕捉灵感的备忘录应用，支持多类型内容与 iCloud 同步",
-      image: "/static/sparkmemos.webp",
-      link: "https://sparkmemos.com",
-      primary: true,
-    },
-    {
-      name: "CassetteOne",
-      summary: "一个模拟磁带机设计的复古风格白噪音和音乐播放器。",
-      image: "/static/cassette-one.webp",
-      link: "https://cassette.one",
-      primary: true,
-    },
-    {
-      name: "游民CO",
-      summary: "数字游民旅居社区网站",
-      image: "/static/youminco.webp",
-      link: "https://youmin.co",
-      primary: true,
-    },
-    {
-      name: "AssisChat",
-      summary: "ChatGPT 客户端",
-      image: "/static/assischat.webp",
-      link: "https://assischat.com",
-      primary: false,
-    },
-    {
-      name: "Lofyee",
-      summary: "Lo-Fi 音乐播放器",
-      image: "/static/lofyee.webp",
-      link: "https://lofyee.com",
-      primary: false,
-    },
-    {
-      name: "主观世界",
-      summary: "分享我思考的博客",
-      image: "/static/subnooc.webp",
-      link: "https://subnooc.com",
-      primary: false,
-    },
-    {
-      name: "OhMyGPT",
-      summary: "一键部署自己 ChatGPT 应用",
-      link: "https://github.com/assischat/ohmygpt",
-      primary: false,
-    },
-    {
-      name: "PH Summary",
-      summary: "Product Hunt 每日摘要",
-      link: "https://twitter.com/ph_summary",
-      primary: false,
     },
   ],
   contacts: [
     {
       label: "X (Twitter)",
-      name: "@noobnooc",
-      link: "https://x.com/noobnooc",
+      name: "@CobbMiller5",
+      link: "https://x.com/CobbMiller5",
       icon: "x",
     },
     {
       label: "GitHub",
-      name: "@noobnooc",
-      link: "https://github.com/noobnooc",
+      name: "@iFence",
+      link: "https://github.com/iFence",
       icon: "github",
     },
     {
       label: "邮箱",
-      name: "nooc@nooc.me",
-      link: "mailto:nooc@nooc.me",
+      name: "vyulei97@gmail.com",
+      link: "mailto:vyulei97@gmail.com",
       icon: "mail",
     },
     {
-      label: "Telegram",
-      name: "@noobnooc",
-      link: "https://t.me/noobnooc",
+      label: "Bilibili",
+      name: "@Aspirin",
+      link: "https://space.bilibili.com/16621788",
       icon: "send",
     },
   ],
@@ -274,7 +202,7 @@ const dictionary: Dictionary = {
       description:
         "「回声铃」是一款可以将 Webhook/Email 转为通知/电话的 iOS 应用。",
       icon: "/static/echobell.webp",
-      link: "https://apps.apple.com/app/apple-store/id6743597198?pt=126931111&ct=Nooc&mt=8",
+      link: "https://echobell.one",
     },
     {
       title: "支持我",
@@ -366,15 +294,15 @@ const dictionary: Dictionary = {
     ],
   },
   aboutContent: `
-这里是 [Nooc](https://nooc.me) 的个人空间。
+这里是 [Aspirin](https://hiaspirin.cc) 的个人空间。
 
 不定期更新，生活里分享作者的自言自语、读书笔记、日常牢骚，但也可能会出现其他任何内容；技术里分享作者在编程、产品相关领域的一些想法和见闻。
 
 ### 关于我
 
-网名是 Nooc，不是一个常规的单词，也没有任何意义。正如本人一样，不是那么的常规，也不强求世俗的意义。
+网名是 Aspirin，意为阿司匹林——一种能缓解疼痛的药物。希望我的这片网络角落也能给你带来一丝慰藉。
 
-活跃在 [Twitter](https://twitter.com/noobnooc) ，经常在上面分享一些不经思考的内容。你也可以通过 [Telegram](https://t.me/noobnooc) 来联系到我，或者是发邮件到 [nooc@nooc.me](mailto:nooc@nooc.me) 。
+活跃在 [X](https://x.com/CobbMiller5) ，经常在上面分享一些不经思考的内容。你也可以通过 [Bilibili](https://space.bilibili.com/16621788) 来联系到我，或者是发邮件到 [vyulei97@gmail.com](mailto:vyulei97@gmail.com) 。
 
 因为量子力学影响，可以说我是 96 年生人，也可说我生于 1997 。是一个市面上普通的三无男性，除了梦想一无所有。还拥有一个也许永远无法完成的梦想，希望有一天能成为游民环游世界。
 
@@ -395,6 +323,8 @@ const dictionary: Dictionary = {
 如果你喜欢姜文、王家卫、是枝裕和、北野武、杨德昌、黄信尧其中任何一个名字，那么我们就是朋友。
 
 就酱～
+
+*主题由 [Nooc](https://nooc.me) 设计*
   `,
 };
 

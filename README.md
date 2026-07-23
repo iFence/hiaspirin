@@ -1,8 +1,8 @@
-## Nooc's Homepage
+## Aspirin's Homepage
 
 [中文](./README.zh.md)
 
-This is the source code of My Homepage.
+This is the source code of my personal homepage, forked from [nooc.me](https://nooc.me).
 
 ## Stack
 
@@ -31,3 +31,7 @@ Both blogs share one content pipeline (Velite):
 - `pnpm build`: Build the site (including prerendered pages and OG images).
 - `pnpm preview`: Build and preview locally in the Workers runtime.
 - `pnpm deploy`: Build and deploy to Cloudflare Workers.
+
+## Credits
+
+Theme and design by [Nooc](https://nooc.me).

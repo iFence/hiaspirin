@@ -1,8 +1,8 @@
-## Nooc 的个人主页
+## Aspirin 的个人主页
 
 [English](./README.md)
 
-这里是我个人主页的源码。
+这里是我个人主页的源码，基于 [nooc.me](https://nooc.me) 修改而来。
 
 ## 技术栈
 
@@ -30,3 +30,7 @@
 - `pnpm build`：构建站点（包含预渲染页面与 OG 图片）。
 - `pnpm preview`：构建并在本地 Workers 运行时中预览。
 - `pnpm deploy`：构建并部署到 Cloudflare Workers。
+
+## 致谢
+
+主题和设计来自 [Nooc](https://nooc.me)。

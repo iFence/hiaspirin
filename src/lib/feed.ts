@@ -1,4 +1,4 @@
-const BASE_URL = "https://nooc.me";
+const BASE_URL = "https://hiaspirin.cc";
 
 interface FeedItem {
   title: string;

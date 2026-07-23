@@ -12,14 +12,14 @@ export const prerender = false;
 
 const FEED_DESCRIPTIONS: Record<Language, Record<string, string>> = {
   en: {
-    all: "All posts from Nooc — tech articles and life essays.",
-    tech: "Tech articles and development insights from Nooc.",
-    life: "Life essays and personal writing from Nooc.",
+    all: "All posts from Aspirin — tech articles and life essays.",
+    tech: "Tech articles and development insights from Aspirin.",
+    life: "Life essays and personal writing from Aspirin.",
   },
   zh: {
-    all: "Nooc 的全部文章——技术与生活。",
-    tech: "Nooc 的技术文章。",
-    life: "Nooc 的生活随笔。",
+    all: "Aspirin 的全部文章——技术与生活。",
+    tech: "Aspirin 的技术文章。",
+    life: "Aspirin 的生活随笔。",
   },
 };
 
@@ -63,7 +63,7 @@ export const GET: RequestHandler = async ({ params, request, platform, url }) =>
       link: post.permalink,
       date: post.date,
       categories: post.categories,
-      author: "nooc@nooc.me (Nooc)",
+      author: "vyulei97@gmail.com (Aspirin)",
     })),
   });
 

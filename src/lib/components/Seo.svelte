@@ -2,7 +2,7 @@
   import { getDictionary, languages, defaultLanguage } from "$lib/dictionaries";
   import type { Language } from "$lib/dictionaries";
 
-  const BASE_URL = "https://nooc.me";
+  const BASE_URL = "https://hiaspirin.cc";
 
   let {
     lang,
@@ -78,7 +78,7 @@
     <meta name="description" content={description} />
   {/if}
   <meta name="keywords" content={allKeywords.join(", ")} />
-  <meta name="author" content="Nooc" />
+  <meta name="author" content="Aspirin" />
   <link rel="canonical" href={url} />
   {#if noindex}
     <meta name="robots" content="noindex, nofollow" />
@@ -101,15 +101,15 @@
       property="article:modified_time"
       content={article.modifiedTime ?? article.publishedTime}
     />
-    <meta property="article:author" content="Nooc" />
+    <meta property="article:author" content="Aspirin" />
     {#each article.tags ?? [] as tag (tag)}
       <meta property="article:tag" content={tag} />
     {/each}
   {/if}
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@noobnooc" />
-  <meta name="twitter:creator" content="@noobnooc" />
+  <meta name="twitter:site" content="@CobbMiller5" />
+  <meta name="twitter:creator" content="@CobbMiller5" />
   <meta name="twitter:title" content={title} />
   {#if description}
     <meta name="twitter:description" content={description} />

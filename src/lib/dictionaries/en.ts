@@ -10,46 +10,45 @@ interface Contact {
 const contacts: Contact[] = [
   {
     label: "X (Twitter)",
-    name: "@noobnooc",
-    link: "https://x.com/noobnooc",
+    name: "@CobbMiller5",
+    link: "https://x.com/CobbMiller5",
     icon: "x",
   },
   {
     label: "GitHub",
-    name: "@noobnooc",
-    link: "https://github.com/noobnooc",
+    name: "@iFence",
+    link: "https://github.com/iFence",
     icon: "github",
   },
   {
     label: "Email",
-    name: "nooc@nooc.me",
-    link: "mailto:nooc@nooc.me",
+    name: "vyulei97@gmail.com",
+    link: "mailto:vyulei97@gmail.com",
     icon: "mail",
   },
   {
-    label: "Telegram",
-    name: "@noobnooc",
-    link: "https://t.me/noobnooc",
+    label: "Bilibili",
+    name: "@Aspirin",
+    link: "https://space.bilibili.com/16621788",
     icon: "send",
   },
 ];
 
 const dictionary = {
   meta: {
-    baseUrl: "https://nooc.me",
-    websiteName: "Nooc the Noob",
-    motto: "A noob named Nooc.",
+    baseUrl: "https://hiaspirin.cc",
+    websiteName: "Aspirin",
+    motto: "Hello, I'm Aspirin",
     mottos: [
       "The rose is without why, it blooms because it blooms.",
       "What we call ordinary life, day after day, may in fact be a chain of miracles.",
     ],
     fillKeywords(keywords?: string[]): string[] {
       return [
-        "Nooc",
-        "noobnooc",
-        "noocink",
-        "nookinc",
-        "Nooc Website",
+        "Aspirin",
+        "iFence",
+        "hiaspirin",
+        "Aspirin's Blog",
         "Portfolio",
         "Indie Blog",
         "Personal Blog",
@@ -69,8 +68,8 @@ const dictionary = {
 
     shareToX(title: string, postLink: string) {
       return `https://twitter.com/share?text=${encodeURIComponent(
-        `I am reading ${title.toLocaleUpperCase()} @noobnooc`,
-      )}&url=${encodeURIComponent(`https://nooc.me${postLink}`)}`;
+        `I am reading ${title.toLocaleUpperCase()} @CobbMiller5`,
+      )}&url=${encodeURIComponent(`https://hiaspirin.cc${postLink}`)}`;
     },
   },
   labels: {
@@ -81,15 +80,15 @@ const dictionary = {
     about: "About",
     latestTech: "Tech",
     latestLife: "Life",
-    noocWorks: "Nooc's Works",
+    aspirinWorks: "Aspirin's Works",
     recommended: "Recommended",
     activity: "Activity",
     categories: "Categories",
     featured: "Featured",
     archive: "Archive",
     shareTo: "Share to: ",
-    brandName: "NOOC",
-    brandTagline: "Nooc the Noob",
+    brandName: "ASPIRIN",
+    brandTagline: "Hello, I'm Aspirin",
     backToSection: {
       posts: "← BACK TO TECH",
       life: "← BACK TO LIFE",
@@ -108,7 +107,7 @@ const dictionary = {
     films: "Recent Films",
     music: "Recent Listening",
     aboutTitle: "About",
-    aboutSubtitle: "A noob named Nooc",
+    aboutSubtitle: "Hello, I'm Aspirin",
     wechatScanHint: "Scan to read on WeChat",
     entries(count: number) {
       return `${count} ${count === 1 ? "entry" : "entries"}`;
@@ -118,16 +117,6 @@ const dictionary = {
     },
   },
   tools: [
-    {
-      name: "Raycast",
-      summary:
-        "Raycast is a blazingly fast, totally extendable launcher for macOS.",
-      link: "https://raycast.com/?via=nooc",
-      icon: "/images/tools/raycast.webp",
-      rating: 5,
-      platform: "macOS",
-      pricing: "freemium",
-    },
     {
       name: "OrbStack",
       summary:
@@ -199,72 +188,11 @@ const dictionary = {
   ],
   works: [
     {
-      name: "Dippod",
-      summary: "AI flashcards from topics, PDFs, and notes.",
-      image: "/static/dippod.webp",
-      link: "https://dippod.com",
+      name: "Power Paste",
+      summary: "A powerful clipboard and paste tool.",
+      image: "/static/power-paste.png",
+      link: "https://power-paste.hiaspirin.cc",
       primary: true,
-    },
-    {
-      name: "Echobell",
-      summary: "Turn webhooks and emails into instant alerts and phone calls.",
-      image: "/static/echobell.webp",
-      link: "https://echobell.one",
-      primary: true,
-    },
-    {
-      name: "Spark Memos",
-      summary: "Capture ideas fast with rich notes and iCloud sync.",
-      image: "/static/sparkmemos.webp",
-      link: "https://sparkmemos.com",
-      primary: true,
-    },
-    {
-      name: "CassetteOne",
-      summary: "A retro design cassette music player for iOS.",
-      image: "/static/cassette-one.webp",
-      link: "https://cassette.one",
-      primary: true,
-    },
-    {
-      name: "YouminCO",
-      summary: "A digital nomad community in Chinese.",
-      image: "/static/youminco.webp",
-      link: "https://youmin.co",
-      primary: true,
-    },
-    {
-      name: "AssisChat",
-      summary: "A ChatGPT client for iOS.",
-      image: "/static/assischat.webp",
-      link: "https://assischat.com",
-      primary: false,
-    },
-    {
-      name: "Lofyee",
-      summary: "A Lo-Fi music player for iOS.",
-      image: "/static/lofyee.webp",
-      link: "https://lofyee.com",
-      primary: false,
-    },
-    {
-      name: "Subject World",
-      summary: "My blog to share my thoughts in Chinese.",
-      image: "/static/subnooc.webp",
-      link: "https://subnooc.com",
-      primary: false,
-    },
-    {
-      name: "OhMyGPT",
-      summary: "Deploy your GPT app by one-click.",
-      link: "https://github.com/assischat/ohmygpt",
-      primary: false,
-    },
-    {
-      name: "PH Summary",
-      summary: "Product Hunt daily summary.",
-      link: "https://twitter.com/ph_summary",
-      primary: false,
     },
   ],
   contacts,
@@ -288,7 +216,7 @@ const dictionary = {
       description:
         "Echobell can convert Webhook/Email to app notifications and calls.",
       icon: "/static/echobell.webp",
-      link: "https://apps.apple.com/app/apple-store/id6743597198?pt=126931111&ct=Nooc&mt=8",
+      link: "https://echobell.one",
     },
     {
       title: "Support me",
@@ -405,15 +333,15 @@ const dictionary = {
     ],
   },
   aboutContent: `
-This is the corner of [Nooc](https://nooc.me).
+This is the corner of [Aspirin](https://hiaspirin.cc).
 
 Updated irregularly, sharing random thoughts, reading notes, and daily ramblings — but anything could appear.
 
 ### About Me
 
-My online name is Nooc — not a real word, no special meaning. Like myself, not so conventional, and not seeking worldly definitions.
+My online name is Aspirin — a name that represents relief and comfort. Like the medicine it's named after, I hope my corner of the internet can ease your mind.
 
-Active on [Twitter](https://twitter.com/noobnooc), often sharing unfiltered thoughts. You can also reach me on [Telegram](https://t.me/noobnooc) or email [nooc@nooc.me](mailto:nooc@nooc.me).
+Active on [X](https://x.com/CobbMiller5), often sharing unfiltered thoughts. You can also find me on [Bilibili](https://space.bilibili.com/16621788) or email [vyulei97@gmail.com](mailto:vyulei97@gmail.com).
 
 Thanks to quantum mechanics, I was born somewhere between 1996 and 1997. An ordinary guy with nothing but dreams. I dream of becoming a nomad and traveling the world someday.
 
@@ -434,6 +362,8 @@ When listening to music, I prefer random shuffle. I can never tell genres apart.
 If you like any of Jiang Wen, Wong Kar-wai, Hirokazu Kore-eda, Takeshi Kitano, Edward Yang, or Huang Xingyao — we're friends.
 
 That's about it~
+
+*Theme by [Nooc](https://nooc.me)*
   `,
 };
 

@@ -53,7 +53,7 @@ function resolveOptions(path: string): OgImageOptions | undefined {
   // Home
   if (page === "") {
     return {
-      title: "Nooc",
+      title: "Aspirin",
       description: dictionary.meta.motto,
       type: "page",
       showTitleAvatar: true,
@@ -74,7 +74,7 @@ function resolveOptions(path: string): OgImageOptions | undefined {
       "life/music": dictionary.labels.music,
     };
     const descriptions: Record<string, string | undefined> = {
-      works: dictionary.labels.noocWorks,
+      works: dictionary.labels.aspirinWorks,
       about: dictionary.labels.aboutSubtitle || undefined,
       resume: resumeContent[lang].imageDescription,
     };

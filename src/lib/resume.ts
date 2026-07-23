@@ -62,11 +62,9 @@ export interface ResumeContent {
 export const resumeContent = {
   zh: {
     pageTitle: "简历",
-    name: "李志青 / Nooc",
-    summary:
-      "初中开始了解代码，大学学了计算机科学与技术专业，毕业后一直从事 web 前后端开发相关工作；做过 Web 端 SaaS、iOS 应用、Electron 桌面端应用；用过 TypeScript、Next.js、SwiftUI、Electron、MongoDB、Docker 等相关技术和工具；热衷于探索 AI 编程，尝试过使用 AI 不写一行代码做出完整产品；",
-    imageDescription:
-      "Web 开发者，做过 SaaS、iOS 和 Electron 产品，常用 Codex、Claude Code、TypeScript、Next.js 和 SwiftUI。",
+    name: "Aspirin",
+    summary: "",
+    imageDescription: "",
     highlights: [],
     sectionLabels: {
       preferences: "求职偏好",
@@ -78,20 +76,20 @@ export const resumeContent = {
       {
         kind: "website",
         label: "网站",
-        value: "nooc.me",
-        href: "https://nooc.me",
+        value: "hiaspirin.cc",
+        href: "https://hiaspirin.cc",
       },
       {
         kind: "email",
         label: "邮箱",
-        value: "nooc@nooc.me",
-        href: "mailto:nooc@nooc.me",
+        value: "vyulei97@gmail.com",
+        href: "mailto:vyulei97@gmail.com",
       },
       {
         kind: "github",
         label: "GitHub",
-        value: "github.com/noobnooc",
-        href: "https://github.com/noobnooc",
+        value: "github.com/iFence",
+        href: "https://github.com/iFence",
       },
     ],
     preferenceGroups: [
@@ -234,11 +232,9 @@ export const resumeContent = {
   },
   en: {
     pageTitle: "Resume",
-    name: "Li Zhiqing / Nooc",
-    summary:
-      "I started learning about code in middle school, majored in Computer Science and Technology in college, and have been working on web frontend and backend development since graduation. I have built web SaaS products, iOS apps, and Electron desktop apps, and have worked with technologies and tools such as TypeScript, Next.js, SwiftUI, Electron, MongoDB, and Docker. I am enthusiastic about exploring AI-assisted programming and have even tried building complete products with AI without writing a single line of code.",
-    imageDescription:
-      "Web developer building SaaS, iOS, and Electron products with Codex, Claude Code, TypeScript, Next.js, and SwiftUI.",
+    name: "Aspirin",
+    summary: "",
+    imageDescription: "",
     highlights: [],
     sectionLabels: {
       preferences: "Preferences",
@@ -250,20 +246,20 @@ export const resumeContent = {
       {
         kind: "website",
         label: "Website",
-        value: "nooc.me",
-        href: "https://nooc.me",
+        value: "hiaspirin.cc",
+        href: "https://hiaspirin.cc",
       },
       {
         kind: "email",
         label: "Email",
-        value: "nooc@nooc.me",
-        href: "mailto:nooc@nooc.me",
+        value: "vyulei97@gmail.com",
+        href: "mailto:vyulei97@gmail.com",
       },
       {
         kind: "github",
         label: "GitHub",
-        value: "github.com/noobnooc",
-        href: "https://github.com/noobnooc",
+        value: "github.com/iFence",
+        href: "https://github.com/iFence",
       },
     ],
     preferenceGroups: [
